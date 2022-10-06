@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey Form</title>
+</head>
+  <body>
+    <h1 id="title">Community Survey Form</h1>
+    <p id="description">Thank you for telling us more about you.</p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label">Your name: <input id="name" type="text" placeholder="John Smith" required /></label>
+        <label id="email-label"> Your email: <input id="email" type="email" placeholder="john@him.com" required /></label>
+        <label id="number-label">Your age: <input id="number" type="number" min="13" max="120" placeholder="32" /></label>
+      </fieldset>
 
+      <fieldset>
+        <label>
+          What programming languages do you focus on?
+          <select id="dropdown">
+            <option>Select one</option>
+            <option>JavaScript</option>
+            <option>Python</option>
+            <option>Rust</option>
+            <option>Ruby</option>
+            <option>PHP</option>
+          </select>
+        </label>
+        <p>Would you recommend our courses to someone else?</p>
+        <label>
+          <input class="inline" type="radio" name="recomendation" value="yes" /> Yes
+        </label>
+        <label>
+          <input class="inline" type="radio" name="recomendation" value="maybe" /> Maybe
+        </label>
+        <label>
+          <input class="inline" type="radio" name="recomendation" value="notAtAll" /> Not at all
+        </label>
+        <p>Which of these areas need improvements?</p>
+        <label>
+          <input class="inline" type="checkbox" value="Back" /> Back-End courses
+        </label>
+        <label>
+          <input class="inline" type="checkbox" value="Front" /> Front-End courses
+        </label>
+        <label>
+          <input class="inline" type="checkbox" value="content" /> All course content
+        </label>
+        <label>
+          <input class="inline" type="checkbox" value="explanations" /> Explanations
+        </label>
+        <label>
+          Give us any comment or suggestion: 
+          <textarea rows="4" cols="30"></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" id="submit" />
+    </form>
+  </body>
+</html>
