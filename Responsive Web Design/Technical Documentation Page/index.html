@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Documentation Page</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>React Tutorial</header>
+        <ul>
+          <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+          <li><a class="nav-link" href="#Getting_Started">Getting Started</a></li>
+          <li><a class="nav-link" href="#ECMAScript_6">ECMAScript 6</a></li>
+          <li><a class="nav-link" href="#Render_HTML">Render HTML</a></li>
+          <li><a class="nav-link" href="#JSX">JSX</a></li>
+          <li><a class="nav-link" href="#Components">Components</a></li>
+        </ul>
+      </nav>
+      <main id="main-doc">
+        <section class="main-section" id="Introduction">
+          <header>Introduction</header>
+          <ul>
+            <li>React is a JavaScript library for building user interfaces.</li>
+            <li>React is used to build single-page applications.</li>
+            <li>React allows us to create reusable UI components.</li>
+          </ul>
+          <h3>Examples</h3>
+          <div class="code">
+          <code>
+            import React from 'react';
+  import ReactDOM from 'react-dom/client';
+  
+  function Hello(props) {
+    return &lt;h1&gt;Hello World!&lt;/h1&gt;;
+  }
+  
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(&lt;Hello /&gt;);
+          </code>
+          </div>
+          <h3>What is React?</h3>
+          <p>React, sometimes referred to as a frontend JavaScript framework, is a JavaScript library created by Facebook.</p>
+          <p>React is a tool for building UI components.</p>
+          <h3>How does React Work?</h3>
+          <p>React creates a VIRTUAL DOM in memory.
+  
+  </p>
+          <p>Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.</p>
+          <p>React only changes what needs to be changed!
+  
+  </p>
+          <p>React finds out what changes have been made, and changes only what needs to be changed.
+  
+  </p>
+          <p>You will learn the various aspects of how React does this in the rest of this tutorial.
+  
+  </p>
+          <h3>React.JS History</h3>
+          <p>Current version of React.JS is V18.0.0 (April 2022).</p>
+          <p>Initial Release to the Public (V0.3.0) was in July 2013.
+  
+  </p>
+          <p>React.JS was first used in 2011 for Facebook's Newsfeed feature.
+  
+  </p>
+          <p>Facebook Software Engineer, Jordan Walke, created it.
+  
+  </p>
+          <p>Current version of <span>create-react-app is v5.0.1</span> (April 2022).
+  
+  </p>
+          <p><span>create-react-app</span> includes built tools such as webpack, Babel, and ESLint.
+  
+  </p>
+          <p>This way of using React can be OK for testing purposes, but for production you will need to set up a <bold>React environment.</bold>
+  
+  </p>
+        </section>
+  
+        <section class="main-section" id="Getting_Started">
+          <header>Getting Started</header>
+          <p>To use React in production, you need npm which is included with Node.js.
+  
+  </p>
+          <p>To get an overview of what React is, you can write React code directly in HTML.
+  
+  </p>
+          <p>But in order to use React in production, you need npm and Node.js installed.
+  
+  </p>
+          <h3>React Directly in HTML
+  </h3>
+          <p>The quickest way start learning React is to write React directly in your HTML files.
+  
+  </p>
+          <p>Start by including three scripts, the first two let us write React code in our JavaScripts, and the third, Babel, allows us to write JSX syntax and ES6 in older browsers.
+  
+  </p>
+          <h4>Example</h4>
+          <p>Include three CDN's in your HTML file:
+  
+  </p>
+          <div class="code">
+          <code>
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin&gt;&lt;/script&gt;
+      &lt;script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin&gt;&lt;/script&gt;
+      &lt;script src="https://unpkg.com/@babel/standalone/babel.min.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+  
+      &lt;div id="mydiv"&gt;&lt;/div&gt;
+  
+      &lt;script type="text/babel"&gt;
+        function Hello() {
+          return &lt;h1&gt;Hello World!&lt;/h1&gt;;
+        }
+  
+        ReactDOM.render(&lt;Hello /&gt;, document.getElementById('mydiv'))
+      &lt;/script&gt;
+  
+    &lt;/body&gt;
+  &lt;/html&gt;
+          </code>
+          </div>
+          <p>This way of using React can be OK for testing purposes, but for production you will need to set up a <span style="font-weight: bold;">React environment.</span>
+  
+  </p>
+          <h3>Setting up a React Environment
+  </h3>
+          <p>If you have npx and Node.js installed, you can create a React application by using <span>create-react-app</span>.
+  
+  </p>
+          <p>Run this command to create a React application named my-react-app:
+  
+  </p>
+          <p class="command">npx create-react-app my-react-app
+  </p>
+        </section>
+  
+        <section class="main-section" id="ECMAScript_6">
+          <header>ECMAScript 6</header>
+          <h3>What is ES6?
+  </h3>
+          <p>ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015, and is also known as ECMAScript 2015.
+  
+  </p>
+          <h3>Why Should I Learn ES6?
+  </h3>
+          <p>React uses ES6, and you should be familiar with some of the new features like:
+  
+  </p>
+          <ul>
+            <li>Classes</li>
+            <li>Arrow Functions</li>
+            <li>Variables (let, const, var)</li>
+            <li>Array Methods like <span style="color:red;">.map()</span></li>
+            <li>Destructuring</li>
+            <li>Modules</li>
+            <li>Ternary Operator</li>
+            <li>Spread Operator</li>
+          </ul>
+        </section>
+  
+        <section class="main-section" id="Render_HTML">
+          <header>Render HTML</header>
+          <p>React's goal is in many ways to render HTML in a web page.</p>
+          <p>React renders HTML to the web page by using a function called <span style="color:red;">ReactDOM.render()</span>.</p>
+          <h3>The Render Function</h3>
+          <p>The <span style="color:red;">ReactDOM.render()</span> function takes two arguments, HTML code and an HTML element.</p>
+          <p>The purpose of the function is to display the specified HTML code inside the specified HTML element.</p>
+          <p>But render where?</p>
+          <p>There is another folder in the root directory of your React project, named "public". In this folder, there is an <span style="color:red;">index.html </span>file.</p>
+          <p>You'll notice a single <span style="color:red;">&lt;div&gt;</span> in the body of this file. This is where our React application will be rendered.</p>
+          <h4>Example</h4>
+          <p>Display a paragraph inside an element with the id of "root":
+  
+  </p>
+          <p style="border-left: 5px solid #90ee90; background-color:#c7c7c7;">ReactDOM.render(&lt;p&gt;Hello&lt;/p&gt;, document.getElementById('root'));
+  </p>
+          <p>The result is displayed in the <span style="color:red;">&lt;div id="root"&gt;</span> element:</p>
+          <div class="code">
+          <code>
+            &lt;body&gt;
+              &lt;div id="root"&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/div&gt;
+            &lt;/body&gt;
+          </code>
+          </div>
+          <p style="background: #fafad2; padding:4px;">Note that the element id does not have to be called "root", but this is the standard convention.</p>
+          <h3>The HTML Code</h3>
+          <p>The HTML code in this tutorial uses JSX which allows you to write HTML tags inside the JavaScript code:</p>
+          <p>Do not worry if the syntax is unfamiliar, you will learn more about JSX in the next chapter.</p>
+          <h4>Example</h4>
+          <p>Create a variable that contains HTML code and display it in the "root" node:</p>
+            <div class="code">
+            <code>
+              const myelement = (
+    &lt;table&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;John&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Elsa&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  );
+  
+  ReactDOM.render(myelement, document.getElementById('root'));
+            </code>
+          </div>
+        </section>
+  
+        <section class="main-section" id="JSX">
+          <header>JSX</header>
+          <h3>What is JSX?</h3>
+          <p>JSX stands for JavaScript XML.</p>
+          <p>JSX allows us to write HTML in React.</p>
+          <p>JSX makes it easier to write and add HTML in React.</p>
+          <h3>Coding JSX</h3>
+          <p>JSX allows us to write HTML elements in JavaScript and place them in the DOM without any <span style="color:red;">createElement()</span>  and/or <span style="color:red;">appendChild() methods</span>.</p>
+          <p>JSX converts HTML tags into react elements.</p>
+          <p style="background: #fafad2; padding:4px;">You are not required to use JSX, but JSX makes it easier to write React applications.</p>
+          <p>Here are two examples. The first uses JSX and the second does not:</p>
+          <h4>Example 1</h4>
+          <p>JSX:</p>
+              <div class="code">
+              <code>
+                const myElement = &lt;h1&gt;I Love JSX!&lt;/h1&gt;;
+  
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(myElement);
+              </code>
+            </div>
+          <h4>Example 2</h4>
+          <p>Without JSX:</p>
+          <div class="code">
+              <code>
+                const myElement = React.createElement('h1', {}, 'I do not use JSX!');
+  
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(myElement);
+              </code>
+            </div>
+          <p>As you can see in the first example, JSX allows us to write HTML directly within the JavaScript code.</p>
+          <p>JSX is an extension of the JavaScript language based on ES6, and is translated into regular JavaScript at runtime.</p>
+        </section>
+  
+        <section class="main-section" id="Components">
+          <header>Components</header>
+          <p>Components are like functions that return HTML elements.</p>
+          <h4>React Components</h4>
+          <p>Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.</p>
+          <p>Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components.</p>
+          <p style="background: #fafad2; padding:4px;">In older React code bases, you may find Class components primarily used. It is now suggested to use Function components along with Hooks, which were added in React 16.8. There is an optional section on Class components for your reference.</p>
+          <h3>Create Your First Component</h3>
+          <p>When creating a React component, the component's name MUST start with an upper case letter.</p>
+          <h4>Class Component</h4>
+          <p>A class component must include the <span style="color:red;">extends React.Component</span> statement. This statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.</p>
+          <p>The component also requires a render() method, this method returns HTML.</p>
+          <h4>Example</h4>
+          <p>Create a Class component called <span style="color:red;">Car</span></p>
+          <div class="code">
+              <code>
+              class Car extends React.Component {
+                  render() {
+                      return &lt;h2&gt;Hi, I am a Car!&lt;/h2&gt;;
+                  }
+              }
+              </code>
+            </div>
+          <h4>Function Component</h4>
+          <p>Here is the same example as above, but created using a Function component instead.</p>
+          <p>A Function component also returns HTML, and behaves much the same way as a Class component, but Function components can be written using much less code, are easier to understand, and will be preferred in this tutorial.</p>
+          <h4>Example</h4>
+          <p>Create a Function component called <span style="color:red;">Car</span></p>
+          <div class="code">
+              <code>
+                function Car() {
+    return &lt;h2&gt;Hi, I am a Car!&lt;/h2&gt;;
+    }
+              </code>
+            </div>
+          <h3>Rendering a Component</h3>
+          <p>Now your React application has a component called Car, which returns an <span style="color:red;">&lt;h2&gt;</span> element.</p>
+          <p>To use this component in your application, use similar syntax as normal HTML: <span style="color:red;">&lt;Car /&gt;</span></p>
+          <h4>Example</h4>
+          <p>Display the <span style="color:red;">Car</span> component in the "root" element:</p>
+          <div class="code">
+              <code>
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(&lt;Car /&gt;);
+              </code>
+            </div>
+          <h3>Props</h3>
+          <p>Components can be passed as <span style="color:red;">props</span>, which stands for properties.</p>
+          <p>Props are like function arguments, and you send them into the component as attributes.</p>
+          <p>You will learn more about <span style="color:red;">props</span> in the next chapter.</p>
+          <h4>Example</h4>
+          <p>Use an attribute to pass a color to the Car component, and use it in the <span style="color:red;">render()</span> function:</p>
+          <div class="code">
+              <code>
+        function Car(props) {
+          return &lt;h2&gt;I am a {props.color} Car!&lt;/h2&gt;;
+        }
+  
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(&lt;Car color="red"/&gt;);
+              </code>
+           </div>
+          <h3>Components in Components</h3>
+          <p>We can refer to components inside other components:</p>
+          <h4>Example</h4>
+          <p>Use the Car component inside the Garage component:</p>
+          <div class="code">
+              <code>
+        function Car() {
+    return &lt;h2&gt;I am a Car!&lt;/h2&gt;;
+  }
+  
+  function Garage() {
+    return (
+      &lt;&gt;
+        &lt;h1&gt;Who lives in my Garage?&lt;/h1&gt;
+        &lt;Car /&gt;
+      &lt;/&gt;
+    );
+  }
+  
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(&lt;Garage /&gt;);
+              </code>
+            </div>
+          <h3>Components in Files</h3>
+          <p>React is all about re-using code, and it is recommended to split your components into separate files.</p>
+          <p>To do that, create a new file with a <span style="color:red;">.js</span> file extension and put the code inside it:</p>
+          <p style="background: #fafad2; padding:4px;">Note that the filename must start with an uppercase character.</p>
+          <h4>Example</h4>
+          <p>This is the new file, we named it "Car.js":</p>
+          <div class="code">
+              <code>
+        function Car() {
+        return &lt;h2&gt;Hi, I am a Car!&lt;/h2&gt;;
+        }
+  
+        export default Car;
+              </code>
+            </div>
+          <p>To be able to use the Car component, you have to import the file in your application.</p>
+          <h4>Example</h4>
+          <p>Now we import the "Car.js" file in the application, and we can use the <span style="color:red;">Car component as if it was created here.</p>
+          <div class="code">
+              <code>
+       import React from 'react';
+  import ReactDOM from 'react-dom/client';
+  import Car from './Car.js';
+  
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(&lt;Car /&gt;);
+              </code>
+            </div>
+        </section>
+      </main>
+</body>
+</html>
