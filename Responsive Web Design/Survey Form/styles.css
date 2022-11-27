@@ -4,12 +4,14 @@
   box-sizing: border-box;
 }
 
+
 body {
     padding: 20px;
     font-size: 17px;
     font-family: Sans-serif;
     background-image: linear-gradient(to right bottom, #ADD8E6, #4682B4);
-    height: 100vh;
+    background-attachment: fixed;
+    height: 100%;
 }
   
   h1, p {
